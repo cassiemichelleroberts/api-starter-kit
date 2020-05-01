@@ -47,26 +47,11 @@ router.get('/',function(req,res){
   respond(args);
 });
 
-router.post('/', function(req,res){
+router.get('/todoitems/',function(req,res){
   var args = {};
   args.request = req;
   args.response = res;
-  args.action = actions.create;
-  args.type = "api";
-  args.config = {
-    metadata:metadata,
-    templates:templates,
-    forms:forms,
-    filter:"list"
-  };
-  respond(args);
-});
-
-router.get('/list/',function(req,res){
-  var args = {};
-  args.request = req;
-  args.response = res;
-  args.action = actions.list;
+  args.action = actions.getAllToDos;
   args.type = "api";
   args.config = {
     metadata:metadata,
@@ -94,7 +79,7 @@ router.get('/filter/', function(req,res){
 });
 */
 
-router.get('/:id', function(req,res){
+router.get('/todoitems/:id', function(req,res){
   var args = {};
   args.request = req;
   args.response = res;
@@ -109,7 +94,7 @@ router.get('/:id', function(req,res){
   respond(args);
 });
 
-router.put('/:id', function(req,res){
+router.put('/todoitems/:id', function(req,res){
   var args = {};
   args.request = req;
   args.response = res;
@@ -124,7 +109,7 @@ router.put('/:id', function(req,res){
   respond(args);
 });
 
-router.delete('/:id', function(req,res){
+router.delete('/todoitems/:id', function(req,res){
   var args = {};
   args.request = req;
   args.response = res;

@@ -8,22 +8,22 @@
 // this service's message properties
 // you MUST include id, dateCreated, and dateUpdated
 exports.props = [
-  'id',
-  
-  'status',
-  'dateCreated',
-  'dateUpdated'
+    'id',
+    'status',
+    'dateCreated',
+    'dateUpdated',
+    'description'
 ];
 
 // required properties
-exports.reqd = [];
+exports.reqd = ['id', 'description'];
 
 // enumerated properties
 exports.enums = [
-  {status:['pending','active','suspended','closed']}
+    {status: ['pending', 'active', 'suspended', 'closed']}
 ];
 
 // default values for properties
 exports.defs = [
-  {name:"status",value:"pending"}
+    {name: "status", value: "pending"}
 ]

@@ -68,6 +68,12 @@ module.exports.list = function(req,res) {
   });
 }
 
+module.exports.getAllToDos = function(req,res) {
+    return new Promise(function(resolve,reject) {
+        resolve(component({name:object,action:'list'}));
+    });
+}
+
 /*
 module.exports.filter = function(req,res) {
   return new Promise(function(resolve,reject){
